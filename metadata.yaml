@@ -1,0 +1,44 @@
+_repo: Under-the-Greenwood-Tree--Or-The-Mellstock-Quire--13-A-Rural-Painting-of-the-Dutch-School_2662
+_version: 0.0.1
+creator:
+  author:
+    agent_name: Hardy, Thomas
+    birthdate: 1840
+    deathdate: 1928
+    gutenberg_agent_id: '23'
+    url: http://www.gutenberg.org/2009/agents/23
+    wikipedia: http://en.wikipedia.org/wiki/Thomas_Hardy
+description: "Under the Greenwood Tree: A Rural Painting of the Dutch School is a\
+  \ novel by Thomas Hardy, published anonymously in 1872. It was Hardy's second published\
+  \ novel, the last to be printed without his name, and the first of his great series\
+  \ of Wessex novels. Whilst Hardy originally thought of simply calling it The Mellstock\
+  \ Quire, he settled on a title taken from a song in Shakespeare's As You Like It\
+  \ (Act II, Scene V).\n From Wikipedia (CC BY-SA)."
+gutenberg_issued: '2001-06-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '2662'
+  wikidata: Q2251594
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Love stories'
+- !lcsh 'Wessex (England) -- Fiction'
+- !lcsh 'Musical fiction'
+- !lcsh 'Women teachers -- Fiction'
+- !lcsh 'Pastoral fiction'
+- !lcsh 'Choirs (Music) -- Fiction'
+- !lcsh 'Courtship -- Fiction'
+- !lcc 'PR'
+- !lcsh 'Church musicians -- Fiction'
+- GITenberg
+title: "Under the Greenwood Tree; Or, The Mellstock Quire\r\nA Rural Painting of the\
+  \ Dutch School"
+url: http://www.gutenberg.org/ebooks/2662
+wikipedia:
+- https://en.wikisource.org/wiki/Under_the_Greenwood_Tree_(Hardy)
+- https://ar.wikipedia.org/wiki/%D8%AA%D8%AD%D8%AA_%D8%A7%D9%84%D8%B4%D8%AC%D8%B1%D8%A9_%D8%A7%D9%84%D8%AE%D8%B6%D8%B1%D8%A7%D8%A1
+- https://nl.wikipedia.org/wiki/Under_the_Greenwood_Tree
+- https://en.wikipedia.org/wiki/Under_the_Greenwood_Tree
