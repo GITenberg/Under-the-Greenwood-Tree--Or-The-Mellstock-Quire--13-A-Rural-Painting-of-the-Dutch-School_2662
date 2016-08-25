@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+before_install:
+- gem install asciidoctor -v 1.5.2
+- gem install tilt
+- sudo pip install git+https://github.com/gitenberg-dev/gitberg
+- sudo pip install pillow
+- sudo pip install cssutils
+- sudo pip install docutils
+- sudo pip install roman
+- sudo pip install git+https://github.com/gitenberg-dev/pg-epubmaker
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+
+- /usr/bin/python -c "from gitenberg import travis; travis.build_epub()"
+- ebook-convert book.epub book.mobi
+- xvfb-run ebook-convert book.epub book.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: FzfJ2NFV7dPiy/Rc7KgUAdnzQT6gDGLP6G7S8R9burVBJ23AzwgdwhYcWYyiP+ZdRdO4deH3n16URqw/ynmEGULuKMDtEeElZWDwFX076c2F4VnShiQSrnVRC6/fTbVtUnhBkdx4znhq+XJR6VsxElvLNQFyCTBwTnkr1Mv4xrEoVUHzv8aW6WHEGDs/rnIAEaoMrJBGjZs5PI0zaqSEyh1zABi7NO1X+QCVmnjHkwWm1d29JpQIiunMEH1tU7rJdwN308YVFY69mfFYmJPA3CoZPea/hQFKm2D/HDMJHTd3UnZWjZqWNHy+U7o+OVRx0BHlS2bQu0c4KYwowmpoBCEZJGdoB+xFCN7wI6ybyT1li6jwslVFM5YOIWGY+AIciPz7pRbJxUXJjuWJEVAA2Wid9ROYiJRcjh0ywkiGddTSrNhRYWrij+hrb3Pecbg7xcRnPiWu+JmJE6MBHOZo/3IMawS2tuz2uGNSFhFbb7Rx9l6Z2Mdmgntad0EJkPog4VF0GBB9dcfrnmZ0J/bZW/1eEzlq20YazekYYT+lJ7zj99AJnH+JzBsh4fu0QUaj2+MF88zOVDSGaiBaaDl25rm2pS25o2+u37nTBYnXS4rKof8543+4xZdlbVuJc2Vfttyk3yavULQI6y9kumdhmWvUReBjyzq3/64PRP7N83g=
+  file:
+    - book.epub
+    - book.mobi
+    - book.pdf
+  "on":
+    repo: GITenberg/Under-the-Greenwood-Tree--Or-The-Mellstock-Quire--13-A-Rural-Painting-of-the-Dutch-School_2662
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
+    - python-pip
+    - git
+    - python-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libfreetype6
+    - libfreetype6-dev
+    - zlib1g-dev
+    - python-lxml
+    - libxml2-dev
+    - libxslt1-dev
+    - tidy
