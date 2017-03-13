@@ -1,5 +1,8 @@
 _repo: Under-the-Greenwood-Tree--Or-The-Mellstock-Quire--13-A-Rural-Painting-of-the-Dutch-School_2662
-_version: 0.1.0
+_version: 0.2.0
+covers:
+- cover_type: generated
+  image_path: cover.png
 creator:
   author:
     agent_name: Hardy, Thomas
@@ -14,6 +17,8 @@ description: "Under the Greenwood Tree: A Rural Painting of the Dutch School is 
   \ of Wessex novels. Whilst Hardy originally thought of simply calling it The Mellstock\
   \ Quire, he settled on a title taken from a song in Shakespeare's As You Like It\
   \ (Act II, Scene V).\n From Wikipedia (CC BY-SA)."
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/2662#Under-the-Greenwood-Tree--Or-The-Mellstock-Quire--13-A-Rural-Painting-of-the-Dutch-School
 gutenberg_issued: '2001-06-01'
 gutenberg_type: Text
 identifiers:
